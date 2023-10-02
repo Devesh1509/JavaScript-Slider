@@ -6,16 +6,13 @@ A Slider Animation Created Using JavaScript.
 
 Live: https://devesh1509.github.io/JavaScript-Slider
 
-# Hi, I'm Devesh Chandel! 👋
+## Features
+- Slides through a collection of images.
+- Next and previous buttons for navigation.
+- Insert additional features here if applicable.
 
-## 🚀 About Me
 
-I'm a final year Computer Science Engineering undergrad @ RGPV Bhopal. Currently Polishing DSA, Problem Solving and Web Development Skills.
+##Known Issue
+Currently, there is a known issue with the slider functionality. When clicking the "Next" button on the last image, it does not loop back to the first image as expected. Contributions to fix this issue are highly encouraged!
 
-## 🛠 Skills
-
-Java, Javascript, HTML, CSS...
-
-## 🔗 Links
-
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/devesh-chandel-b29722226/))
+Feel free to contribute, report issues, or suggest improvements. Let's make this image slider even better together!
