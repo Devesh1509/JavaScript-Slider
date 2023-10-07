@@ -1,18 +1,13 @@
-const left = document.querySelector(".left");
-const right = document.querySelector(".right");
-const slider = document.querySelector(".slider");
-const images = document.querySelectorAll(".image");
-const bottom = document.querySelector(".bottom");
+let slideIndex = 1;
+showSlides(slideIndex);
 
-let slideNumber = 1;
-const length = images.length;
 
-for (let i = 0; i < length; i++) {
-  const div = document.createElement("div");
-  div.className = "button";
-  bottom.appendChild(div);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 const buttons = document.querySelectorAll(".button");
 buttons[0].style.backgroundColor = "#484b6a";
 
@@ -51,14 +46,21 @@ const getLastSlide = () => {
 const changeColor = ()=>{
   resetBg()
   buttons[slideNumber-1].style.backgroundColor = "#484b6a";
+
 }
 
-right.addEventListener("click", () => {
-  slideNumber < length ? nextSlide() : getFirstSlide();
-  changeColor()
-});
-
-left.addEventListener("click", () => {
-  slideNumber > 1 ? prevSlide() : getLastSlide();
-  changeColor()
-});
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
